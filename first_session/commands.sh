@@ -42,5 +42,8 @@ db.users.find()
 db.users.update({"name": "joe"}, {"$push": {"friends":{"name": "pablo", "email": "alro@ro.co"}}})
 db.users.update({"name": "joe"}, {"$addToSet": {"friends":{"name": "Diego", "email": "alr@mw.co"}}})
 
+# set address with multi update
+db.users.update({}, {"$addToSet": {"address":[]}}, {multi: true})
+
 # Drop collection
 db.users.drop()
