@@ -24,7 +24,7 @@ sudo mongod --config settings/rs2.conf
 # Check mongod services with 3 dameons for mongodb
 ps -ef | grep mongo
 
-sudo mongo --port 1011
+sudo mongo --port 1010
 
 # Check replica set config
 rs.conf()
@@ -46,14 +46,14 @@ rs.status()
 exit
 
 # Find on second secondary node secondary
-sudo mongo --port 1012
+sudo mongo --port 1011
 
 rs.slaveOk()
 
 db.users.find()
 
 # Find on third secondary node secondary
-sudo mongo --port 1013
+sudo mongo --port 1012
 
 rs.slaveOk()
 

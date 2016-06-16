@@ -4,7 +4,7 @@ ps -ef | grep mongo
 # use config_files/rs0.conf without replSet parameter
 sudo mongod --config settings/rs0.conf
 
-sudo mongo --port 1011
+sudo mongo --port 1010
 
 # create super user
 use admin
